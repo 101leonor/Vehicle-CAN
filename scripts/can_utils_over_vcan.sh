@@ -1,15 +1,9 @@
 #! /bin/bash
-
 ip link ls
-
 sudo modprobe vcan
-
 sudo ip link add dev vcan0 type vcan
-
 ip link ls
-
 sudo ip link set up vcan0
-
 ip link ls
 
 
