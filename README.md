@@ -27,13 +27,19 @@ A practical example of changing interior lights (Ford Mustang Mach-E case) is in
 ```bash
 sudo apt-get update
 sudo apt-get install can-utils
+```
 
+---
+
+## 📄 Scripts
 
 1️⃣ CAN-utils Basics (Physical CAN Interface)
 
 Script: can_utils_basics.sh
 
+```bash
 sudo bash scripts/can_utils_basics.sh
+```
 
 Overview:
   - Installs can-utils
@@ -49,27 +55,33 @@ Overview:
 
 Script: can_utils_over_vcan.sh
 
+```bash
 sudo bash scripts/can_utils_over_vcan.sh
+```
 
 Instructions (use multiple terminals):
   Terminal 1: Generate random traffic
+  ```bash
       cangen vcan0
-
-  Terminal 2: Monitor traffic
+  ```
+  Terminal 2: Monitor traffic  
+  ```bash
       candump vcan0
-
+  ```
   Terminal 1: Send specific CAN frames
+   ```bash
       cansend vcan0 123#1122334125667767
-
+   ```
   Terminal 2: Log incoming frames
+   ```bash 
       candump vcan0 -l
-
+   ```
 3️⃣ Interior Lights Script (Simulated)
 
 Script: change_lights_script.sh
-
+```bash
 sudo bash scripts/change_lights_script.sh
-
+```
 What It Does:
   - Sends alternating CAN frames to simulate turning interior lights on/off in a loop.
   - Originally tested on Ford Mustang Mach-E.
