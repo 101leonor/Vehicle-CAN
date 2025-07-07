@@ -1,10 +1,17 @@
 #! /bin/bash
+
 ip link ls
+
 sudo modprobe vcan
+
 sudo ip link add dev vcan0 type vcan
+
 ip link ls
+
 sudo ip link set up vcan0
+
 ip link ls
+
 
 # terminal #1
 # keep it running for raffic transmission
@@ -30,7 +37,9 @@ candump vcan0
 # terminal #2
 candump vcan0 -l
 
+
 # terminal #1
 cangen vcan0
 
-check logs
+
+# check logs
