@@ -8,7 +8,7 @@ A practical example of changing interior lights (Ford Mustang Mach-E case) is in
 
 ## 📦 What’s Inside
 
-- `can_utils_basics.sh` — Basic setup and usage of `can-utils` with physical CAN interfaces
+- `can_utils_basics.sh` — Basic setup and usage of `can-utils` with physical CAN interfaces (Innomaker CAN-USB adapter, CANable, and PCAN-USB)
 - `can_utils_over_vcan.sh` — Create and test a virtual CAN interface for simulation
 - `change_lights_script.sh` — Sample script that simulates sending CAN frames to change interior lights
 
@@ -51,7 +51,9 @@ Overview:
   - Confirm bitrate compatibility (500000, 250000, 125000)
   - Your vehicle may have a Security Gateway blocking traffic
 
-2️⃣ Virtual CAN (VCAN) Simulation
+---
+
+2️⃣ CAN-utils over Virtual CAN (VCAN) Simulation
 
 Script: can_utils_over_vcan.sh
 
@@ -76,6 +78,9 @@ Instructions (use multiple terminals):
    ```bash 
       candump vcan0 -l
    ```
+
+--- 
+
 3️⃣ Interior Lights Script (Simulated)
 
 Script: change_lights_script.sh
