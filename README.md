@@ -62,22 +62,23 @@ sudo bash scripts/can_utils_over_vcan.sh
 ```
 
 Instructions (use multiple terminals):
-  Terminal 1: Generate random traffic
-  ```bash
-      cangen vcan0
-  ```
-  Terminal 2: Monitor traffic  
-  ```bash
-      candump vcan0
-  ```
-  Terminal 1: Send specific CAN frames
-   ```bash
-      cansend vcan0 123#1122334125667767
-   ```
-  Terminal 2: Log incoming frames
-   ```bash 
-      candump vcan0 -l
-   ```
+
+Terminal 1: Generate random traffic
+```bash
+    cangen vcan0
+```
+Terminal 2: Monitor traffic  
+```bash
+    candump vcan0
+```
+Terminal 1: Send specific CAN frames
+ ```bash
+    cansend vcan0 123#1122334125667767
+ ```
+Terminal 2: Log incoming frames
+ ```bash 
+    candump vcan0 -l
+ ```
 
 --- 
 
